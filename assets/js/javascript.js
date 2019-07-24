@@ -4,7 +4,8 @@ function renderButtons() {
   $("#buttons-view").empty();
   for (var i = 0; i < animals.length; i++) {
     var a = $("<button>");
-    a.addClass("animals");
+    a.addClass("animals btn btn-dark");
+    a.addClass("m-2");
     a.attr("data-name", animals[i]);
     a.text(animals[i]);
     $("#buttons-view").append(a);
@@ -25,10 +26,12 @@ function displayGifs() {
 }
 
 function redndergifs() {
+  $("#gif-display").empty();
   for (var i = 0; i < Response.length; i++) {
     var Div = $("<div>");
     var rating = Response[i].rating;
     var p = $("<p>").text("Rating: " + rating);
+    p.css("color","white");
     var animalImage = $("<img>");
     animalImage.attr("src", Response[i].images.fixed_height_still.url);
     animalImage.attr("data-still", Response[i].images.fixed_height_still.url);
@@ -38,6 +41,7 @@ function redndergifs() {
     Div.addClass("gif");
     Div.prepend(p);
     Div.prepend(animalImage);
+    Div.css('width','300px');
     $("#gif-display").prepend(Div);
   }
 }
@@ -48,6 +52,7 @@ $("#add-animal").on("click", function (event) {
   event.preventDefault();
   var animal = $("#animal-input").val().trim();
   animals.push(animal);
+  $("#animal-input").val("");
   renderButtons();
 });
 
