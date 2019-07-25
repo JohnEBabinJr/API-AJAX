@@ -26,7 +26,6 @@ function displayGifs() {
 }
 
 function redndergifs() {
-  $("#gif-display").empty();
   for (var i = 0; i < Response.length; i++) {
     var Div = $("<div>");
     var rating = Response[i].rating;
@@ -38,10 +37,9 @@ function redndergifs() {
     animalImage.attr("data-animate", Response[i].images.fixed_height.url);
     animalImage.attr("data-state", "still");
     animalImage.attr("class", "still");
-    Div.addClass("gif");
+    Div.addClass("gif col-4");
     Div.prepend(p);
     Div.prepend(animalImage);
-    Div.css('width','300px');
     $("#gif-display").prepend(Div);
   }
 }

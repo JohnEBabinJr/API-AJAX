@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="assets/css/style.css">
+
     <script src=" https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
         </script>
@@ -24,17 +26,21 @@
         </div>
     </div>
     <div class="container">
-        <form class="form-inline" id="form">
+        <h5 class="mb-3" style="color: white">Click the animal button to display gifs. Looking for differnt animal? Add
+            it in the section below.</h5>
+    </div>
+    <div class="container">
+        <form class="form-inline" id="form" style="float: left">
             <input type="text" id="animal-input" placeholder="Different Animal?"><br>
 
             <input class="btn btn-secondary ml-1" id="add-animal" type="submit" value="Add Animal">
         </form>
-        <div id="buttons-view">
+        <div id="buttons-view" style="float: right; width:50%; height: 125px">
 
         </div>
     </div>
-    <div class="container">
-        <div id="gif-display">
+    <div class="container" style="clear: both">
+        <div class="row" id="gif-display">
 
         </div>
     </div>
